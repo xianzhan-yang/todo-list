@@ -41,9 +41,9 @@ describe("Todo List App", () => {
     fireEvent.change(input, { target: { value: "Delete Test" } });
     fireEvent.click(screen.getByText(/add/i));
 
-    const deleteButton = screen.getByText(/delete/i);
+    const deleteButton = screen.getAllByRole("button", { name: /delete/i });
     // Simulate clicking the delete button
-    fireEvent.click(deleteButton);
+    fireEvent.click(deleteButton[0]);
 
     // Verify the todo item is removed from the DOM
     expect(screen.queryByText("Delete Test")).not.toBeInTheDocument();
