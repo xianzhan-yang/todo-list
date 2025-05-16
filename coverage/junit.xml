@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites name="vitest tests" tests="4" failures="0" errors="0" time="0.170472835">
+    <testsuite name="src/App.test.jsx" timestamp="2025-05-16T03:37:54.232Z" hostname="localhost.localdomain" tests="4" failures="0" errors="0" skipped="0" time="0.170472835">
+        <testcase classname="src/App.test.jsx" name="Todo List App &gt; renders input field and add button" time="0.034604161">
+        </testcase>
+        <testcase classname="src/App.test.jsx" name="Todo List App &gt; can add a new todo item" time="0.029897131">
+        </testcase>
+        <testcase classname="src/App.test.jsx" name="Todo List App &gt; can toggle todo item completion" time="0.07576282">
+        </testcase>
+        <testcase classname="src/App.test.jsx" name="Todo List App &gt; can delete a todo item" time="0.028554191">
+        </testcase>
+    </testsuite>
+</testsuites>

@@ -40,7 +40,7 @@ pipeline {
 
   post {
     always {
-      junit '**/coverage/**/junit.xml' // 如果你配置了 Vitest 的 junit reporter
+      junit 'coverage/junit.xml'
     }
     success {
       echo 'Pipeline succeeded!'
