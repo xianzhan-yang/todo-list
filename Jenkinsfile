@@ -26,9 +26,10 @@ pipeline {
       post {
         always {
             junit 'coverage/junit.xml'
+        }
       }
-    }
-   
+    } 
+
     stage('Build') {
       steps {
         sh 'npm run build'
