@@ -3,6 +3,7 @@ pipeline {
 
   tools {
     nodejs 'nodejs' 
+    docker 'docker'
   }
 
   stages {
@@ -30,12 +31,12 @@ pipeline {
       }
     }
 
-    // 可选：部署到服务器或发布静态站点
-    // stage('Deploy') {
-    //   steps {
-    //     sh './deploy.sh'
-    //   }
-    // }
+    stage('Deploy') {
+       steps {
+         sh 'sudo docker build -t todo-list .'
+	 sh 'sudo docker run -d -p 8081:80 todo-list'
+       }
+     }
   }
 
   post {
