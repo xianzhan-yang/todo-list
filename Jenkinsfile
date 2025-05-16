@@ -23,8 +23,12 @@ pipeline {
       steps {
         sh 'npm run test'
       }
+      post {
+        always {
+            junit 'coverage/junit.xml'
+      }
     }
-
+   
     stage('Build') {
       steps {
         sh 'npm run build'
@@ -40,9 +44,6 @@ pipeline {
   }
 
   post {
-    always {
-      junit 'coverage/junit.xml'
-    }
     success {
       echo 'Pipeline succeeded!'
     }
