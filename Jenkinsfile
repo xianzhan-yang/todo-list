@@ -38,8 +38,8 @@ pipeline {
 
     stage('Deploy') {
        steps {
-         sh 'sudo docker build -t todo-list .'
-	 sh 'sudo docker run -d -p 8081:80 todo-list'
+         sh 'docker build -t todo-list .'
+	 sh 'docker run -d -p 8081:80 todo-list'
        }
      }
   }
